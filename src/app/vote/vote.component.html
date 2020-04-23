@@ -1,0 +1,39 @@
+<ons-card>
+  Bem vindo, <b>{{user}}</b>
+</ons-card>
+
+<ons-card>
+  <div class="title">
+    Descrição
+  </div>
+  <div class="content">
+    {{description}}
+  </div>
+</ons-card>
+
+<ons-card>
+  <div class="title">
+    Vote!
+  </div>
+  <div class="content">
+    <span *ngIf="options.length == 0" class="empty item">Adicione uma opção!</span>
+
+    <div *ngIf="options.length > 0">
+      <ons-list>
+        <ons-list-header>Opções</ons-list-header>
+        <ons-list-item *ngFor="let option of options;">
+          <div class="center">
+            {{option}}
+          </div>
+          <div class="right">
+            <ons-switch></ons-switch>
+          </div>
+        </ons-list-item>
+      </ons-list>
+    </div>
+    <div>
+      <ons-input class="item" placeholder="Adicione aqui" [(value)]="newOption"></ons-input>
+      <ons-fab title="Adicionar" (click)="adicionarOpcao()" class="item button" modifier="mini" style="text-align:center">+</ons-fab>
+    </div>
+  </div>
+</ons-card>

@@ -1,0 +1,16 @@
+div.content {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.empty {
+  text-align: center;
+  flex-wrap: wrap;
+  margin: 50px 10px;
+}
+.item {
+  flex: 1;
+}
+.button {
+  vertical-align: middle;
+  margin: 10px 10px;
+}
